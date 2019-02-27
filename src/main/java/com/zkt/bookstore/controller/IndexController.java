@@ -22,6 +22,6 @@ public class IndexController {
         String bookName = request.getParameter("name");
         List<Book> bookList = bookService.getBookList(bookName);
         model.addAttribute("books", bookList);
-        return "index";//返回view视图，对应login.html
+        return "index";//返回view视图，对应index.html
     }
 }
