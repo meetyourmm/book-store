@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图书商城</title>
+</head>
+<body>
+<h1>图书列表</h1>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>名称</th>
+        <th>价格</th>
+        <th>图片</th>
+    </thead>
+    <tbody>
+        <tr  th:each="book : ${books}">
+            <th scope="row" th:text="${book.id}">1</th>
+            <td th:text="${book.name}">Mark</td>
+            <td th:text="${book.price}">Otto</td>
+            <td >
+                <img th:src="${book.url}"/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
